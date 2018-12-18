@@ -1,0 +1,25 @@
+@import url("../Elements/_logo.sass");
+@import url("../Elements/_nav.sass");
+@import url("../Elements/_header.sass");
+@import url("../Elements/_text-container.sass");
+@import url("../Elements/_info.sass");
+@import url("../Elements/_footer.sass");
+.contact-container {
+  background: url("../../img/contact-bg.png") no-repeat center/cover; }
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px; }
+
+.contact {
+  padding: 130px 0 81px; }
+  .contact__description {
+    padding-top: 34px;
+    color: #fff; }
+  .contact__contacts {
+    align-self: flex-start;
+    margin-right: 20px; }
+  .contact__container {
+    margin-top: 122px; }

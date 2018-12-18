@@ -1,0 +1,51 @@
+@import "variables"
+
+@import "mixins"
+
+.selector-container
+  +flex-content(space-between)
+  align-items: baseline
+  position: relative
+  flex-wrap: wrap
+  @media (max-width: 720px)
+    justify-content: center
+  &-overlined:before, &-underlined:after
+    content: ''
+    position: absolute
+    display: block
+    height: 1px
+    background-color: #94b963
+    width: 100%
+
+  &-overlined:before
+    bottom: 0
+
+  &__item
+    +flex-content(space-between)
+    align-items: baseline
+    flex-wrap: wrap
+    margin: 32px 25px
+    color: #fff
+    font-family: $first-font
+    @media (max-width: 554px)
+      h4
+        margin: 20px 0
+        text-align: center
+        flex-basis: 100%
+
+
+  &__name
+    font-size: 20px
+
+  &__title
+    padding: 10px
+    margin-left: 45px
+    color: #fff
+    text-decoration: none
+    @media (max-width: 554px)
+      font-size: 20px
+      margin-left: 0
+
+    &-hovered:hover
+      border-radius: 5px
+      background-color: #f5c149

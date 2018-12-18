@@ -1,0 +1,44 @@
+@import "mixins"
+
+@import "variables"
+
+.services-container
+  +flex-content(space-between)
+  flex-wrap: wrap
+  @media (max-width: 1024px)
+    justify-content: space-around
+
+  &__item
+    +flex-content(space-around)
+    flex-direction: column
+    align-items: center
+    text-align: center
+    flex-basis: 19%
+    padding: 45px 25px
+    @media (max-width: 1024px)
+      flex-basis: 40%
+      margin-bottom: 50px
+    @media (max-width: 650px)
+      flex-basis: 100%
+
+  &__title
+    text-transform: uppercase
+    font:
+      size: 30px
+      weight: 300
+      family: $first-font
+
+  &__description
+    max-width: 209px
+    width: 100%
+    line-height: 20px
+    font:
+      family: $first-font
+      size: 14px
+
+
+@each $services in (lightball, wand, giars, rocket)
+  .#{$services}
+    background: url("../img/#{$services}.png") no-repeat center/cover
+    height: 130px
+    width: 130px

@@ -1,0 +1,39 @@
+@import url("../Elements/_header.sass");
+@import url("../Elements/_nav.sass");
+@import url("../Elements/_logo.sass");
+@import url("../Elements/_text-container.sass");
+@import url("../Elements/_services-container.sass");
+@import url("../Elements/_variables.sass");
+@import url("../Elements/_mixins.sass");
+@import url("../Elements/_variables.sass");
+@import url("../Elements/_mixins.sass");
+.service-container {
+  background: url("../../img/service-bg.png") no-repeat center/cover; }
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px; }
+
+.service {
+  padding: 118px 0 124px; }
+  @media (min-width: 2560px) {
+    .service {
+      height: 100vh; } }
+  .service__additional-description {
+    padding-top: 46px;
+    color: #ffffff; }
+  .service__description {
+    padding-top: 22px;
+    color: #ffcccf; }
+  .service__container {
+    padding-top: 120px; }
+  .service__item {
+    background-color: rgba(200, 83, 90, 0.8); }
+  .service__caption {
+    padding-top: 30px;
+    color: #fff; }
+  .service__info {
+    padding-top: 50px;
+    color: #fefefe; }

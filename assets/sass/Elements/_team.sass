@@ -1,0 +1,121 @@
+@import "variables"
+
+@import "mixins"
+
+.team
+  text-align: center
+  &__introduction
+    display: inline-block
+    padding: 16px 42px
+    margin: 0 auto
+    text-transform: uppercase
+    color: #fff
+    font:
+      size: 25px
+      weight: bold
+      family: $first-font
+    background-color: #a1ca6c
+    &::before
+      content: ''
+      position: absolute
+      left: 44%
+      bottom: -31px
+      border: 16px solid transparent
+      border-top: 16px solid #a1ca6c
+    &_position-relative
+      position: relative
+
+  &__container
+    display: flex
+    flex-wrap: wrap
+    @media (max-width: 768px)
+      justify-content: center
+
+  &__item
+    padding: 50px 33px 32px
+    +flex-content(space-around)
+    flex-direction: column
+    flex-grow: 1
+    flex-basis: 17%
+    flex-wrap: nowrap
+    margin-right: 20px
+    background-color: rgba(77, 63, 75, 0.5)
+    &:last-child
+      margin-right: 0
+    &:hover
+      background-color: rgba(77, 63, 75, 0.8)
+    @media (max-width: 1024px)
+      margin: 20px
+      flex-basis: 39%
+      &:last-child
+        margin-right: 20px
+    @media (max-width: 768px)
+      flex-grow: 0
+      flex-basis: 25%
+    @media (max-width: 425px)
+      flex-basis: 100%
+
+
+  &__photo
+    position: relative
+    img
+      display: block
+      width: 100%
+      transition: 0.3s ease
+    &-hovered
+      position: absolute
+      top: 0
+      opacity: 0
+
+  &__name
+    padding-top: 30px
+    text-transform: uppercase
+    color: #c7b6c5
+    font:
+      size: 25px
+      weight: bold
+      family: $first-font
+
+  &__role
+    padding-top: 13px
+    padding-bottom: 37px
+    color: #a1ca6c
+    font:
+      size: 14px
+      family: $first-font
+      
+
+  &__network-container
+   +flex-content(center)
+
+
+  &__network-item
+    +flex-content(center)
+    align-items: center
+    margin-right: 19px
+    border-radius: 50%
+    width: 31px
+    height: 31px
+    background-color: #a1859e
+    &:last-child
+      margin-right: 0
+    a
+      text-decoration: none
+      color: #fff
+
+  &__item:hover .team__photo-hovered
+    transition: 0.3s ease
+    opacity: 1
+
+
+  @each $color, $person in (#fff, name), (#ff8973, role)
+    &__item:hover .team__#{$person}-hover
+      color: $color
+      transition: 0.3s ease
+
+
+  @each $color, $social in (#4f689e, facebook), (#74c7d5, twitter), (#df5c64, google), (#3e61af, linked)
+    &__item:hover .team__network-item_hover-#{$social}
+        background-color: $color
+        transition: 0.3s ease
+

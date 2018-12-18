@@ -1,0 +1,24 @@
+@import url("../Elements/_header.sass");
+@import url("../Elements/_nav.sass");
+@import url("../Elements/_logo.sass");
+@import url("../Elements/_text-container.sass");
+@import url("../Elements/_selector.sass");
+@import url("../Elements/_works-container.sass");
+@import url("../Elements/_variables.sass");
+@import url("../Elements/_mixins.sass");
+.work-container {
+  background: url("../../img/work-bg.png") no-repeat center/cover; }
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px; }
+
+.works {
+  padding: 130px 0 105px; }
+  .works__description {
+    padding-top: 34px;
+    color: #fff; }
+  .works__container {
+    margin-top: 58px; }

@@ -1,0 +1,27 @@
+@import url("../Elements/_logo.sass");
+@import url("../Elements/_nav.sass");
+@import url("../Elements/_header.sass");
+@import url("../Elements/_text-container.sass");
+@import url("../Elements/_team.sass");
+@import url("../Elements/_variables.sass");
+@import url("../Elements/_mixins.sass");
+@import url("../Elements/_variables.sass");
+@import url("../Elements/_mixins.sass");
+.about-container {
+  background: url("../../img/about-bg.png") no-repeat center/cover; }
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px; }
+
+.about {
+  padding: 130px 0 110px; }
+  .about__description {
+    padding-top: 34px;
+    color: #e6d1e3; }
+  .about__introduction {
+    margin-top: 60px; }
+  .about__container {
+    margin-top: 70px; }
